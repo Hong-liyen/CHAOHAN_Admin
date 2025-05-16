@@ -1,0 +1,166 @@
+body {
+    position: relative;
+    display: flex;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    opacity: .85;
+    transition: all 0.2s ease;
+}
+label {
+    font-size: .85em;
+}
+.fa-bell {
+    position: relative;
+}
+.fa-home {
+    margin-right: 5px;
+}
+.circle {
+    position: absolute;
+    background: #fd4545;
+    width: .5em;
+    height: .5em;
+    right: 0;
+    top: 0;
+    border: 2px solid #fff;    
+}
+.aside_menu {
+    background: #444;
+    height: 100vh;
+    width: 210px;
+}
+.menu i {
+    width: 25px;
+    font-size: .8em;
+}
+.aside_menu .logo {
+    font-size: 1.2em;
+}
+.aside_menu li {
+    position: relative;
+    background-color: #4c4c4c;
+    font-size: 1em;
+}
+.aside_menu li:hover {
+    opacity: .85;
+    transition: all 0.2s ease;
+}
+.aside_menu li .fa-angle-down, .aside_menu li .fa-angle-up {
+    position: absolute;
+    right: 15px;
+    width: auto;
+}
+.aside_close {
+    display: none;
+}
+.dropdown_menu {
+    display: none;
+    background-color: #7a7777;
+}
+.dropdown_menu li a {
+    font-size: .8em;
+    padding-left: 40px;
+}
+.main_content {
+    width: calc(100% - 210px);
+    height: 100vh;
+}
+.main_content .header {
+    background-color: #F5F5F5;
+}
+.main_content .header i {
+    color: #444;
+}
+.fa-bell {
+    font-size: 1.2em;
+}
+.fa-sign-out {
+    font-size: 1.5em;
+}
+.main_content .header img {
+    width: 1.5em;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+table img {
+    width: 3em;
+}
+tbody tr th, tbody tr td {
+    font-size: .85em;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.model {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 25;
+    background-color: rgba(0, 0, 0, .8);
+}
+.deletebox, .edit_add_box, .subscribe_records_box {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.open {
+    display: block;
+}
+.close {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    button {
+        width: 100%;
+    }
+    .aside_menu {
+        display: none;
+        position: fixed;
+        height: auto;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        overflow: hidden;
+    }
+    .logo {
+        position: relative;
+    }
+    .aside_close {
+        position: absolute;
+        display: block;
+        top: 16px;
+        right: 12px;
+        z-index: 100;
+    }
+    .main_content {
+        width: 100%;
+    }
+    .deletebox, .edit_add_box, .subscribe_records_box {
+        width: 100%;
+        height: auto;
+    }
+    .open {
+        display: block;
+    }
+    .close {
+        display: none;
+    }
+}
