@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台-方案管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="aside_menu">
+        <div class="logo text-center p-3">
+            <a href="#" onclick="aside_menu_close()" class="aside_close"><i class="fa fa-times text-white" aria-hidden="true"></i></a>
+            <a href="index.html" class="text-white fw-bolder">Admin</a>
+        </div>
+        <div class="menu">
+            <li>
+                <a href="select_price.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-file-pdf-o px-2" aria-hidden="true"></i>方案管理</a>
+            </li>
+            <li>
+                <a href="#" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-folder-open-o px-2" aria-hidden="true"></i>商品分類</a>
+            </li>
+            <li>
+                <a href="#" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-file-text-o px-2" aria-hidden="true"></i>商品管理</a>
+            </li>
+            <li>
+                <a href="order.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-table px-2" aria-hidden="true"></i>訂單管理</a>
+            </li>
+            <li>
+                <a href="member.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-address-book-o px-2" aria-hidden="true"></i>會員管理</a>
+            </li>
+            <li onclick="menu()">
+                <a href="#" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-bar-chart px-2" aria-hidden="true"></i>報表<i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+            </li>
+            <div class="dropdown_menu">
+                <li>
+                    <a href="#" class="d-flex align-items-center text-white py-2">銷售報表</a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex align-items-center text-white py-2">庫存變化報表</a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex align-items-center text-white py-2">用戶變化報表</a>
+                </li>
+            </div>
+            <li>
+                <a href="banner.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-picture-o px-2" aria-hidden="true"></i>首頁banner管理</a>
+            </li>
+            <li>
+                <a href="#" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-commenting-o px-2" aria-hidden="true"></i>客服中心</a>
+            </li>
+            <li>
+                <a href="manager.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-cog px-2" aria-hidden="true"></i>管理者設定</a>
+            </li>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="header d-flex justify-content-between align-items-center py-2 px-3">
+            <div class="left">            
+                <a href="#" onclick="barMenu()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <div class="right d-flex justify-content-between align-items-center">            
+                <a href="#" class="mx-2">
+                    <i class="fa fa-bell" aria-hidden="true"><div class="circle rounded-circle"></div></i>
+                </a>
+                <a href="#" class="mx-2">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>                
+                </a>
+                <a href="#" class="mx-2"><img src="images/avatar.jpg" alt="" class="rounded-circle"></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb py-2">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">方案管理</li>
+                    </ol>
+                </nav>
+                <div class="search_list py-1">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6 mt-md-0 mt-2">
+                                <label for="selectName" class="form-label">建立日期</label>
+                                <div class="row">
+                                    <div class="col-md-6">                                
+                                        <input class="form-control" type="date" placeholder="請選擇起始日">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input class="form-control mt-md-0 mt-2" type="date" placeholder="請選擇結束日">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mt-md-0 mt-2">
+                                <label for="selectState" class="form-label">狀態</label>
+                                <select class="form-select">
+                                    <option value="1" selected>啟用</option>
+                                    <option value="2">停用</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 mt-md-0 mt-2">
+                                <label for="selectName" class="form-label">方案名稱</label>
+                                <input class="form-control" type="text" placeholder="請輸入方案名稱">
+                            </div>
+                            <div class="col-md-3 mt-2">
+                                <label for="selectDetail" class="form-label">方案詳情</label>
+                                <input class="form-control" type="text" placeholder="請輸入方案詳情">
+                            </div>
+                            <div class="col-md-3 mt-2 d-block align-content-end">
+                                <button type="button" class="btn btn-primary">搜尋</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-end">
+                    <div class="mt-2">
+                        <button type="button" class="btn btn-primary" onclick="editaddbox()">新增</button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <table class="table mt-md-3 mt-5">
+                        <thead>
+                            <tr>
+                            <th scope="col">建立日期</th>
+                            <th scope="col">方案名稱</th>
+                            <th scope="col">方案詳情</th>
+                            <th scope="col">價格</th>
+                            <th scope="col">狀態</th>
+                            <th scope="col">備註</th>
+                            <th scope="col">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">2025/05/06</th>
+                            <td>自由穿搭方案</td>
+                            <td>詳情詳情詳情</td>
+                            <td>$590</td>
+                            <td>啟用</td>
+                            <td>首次訂閱</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-secondary" onclick="editaddbox()">編輯</button>
+                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-1" onclick="deletebox()">刪除</button>
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2025/04/06</th>
+                            <td>高級尊榮方案</td>
+                            <td>詳情詳情詳情</td>
+                            <td>$2500</td>
+                            <td>停用</td>
+                            <td>首次訂閱</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-secondary" onclick="editaddbox()">編輯</button>
+                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-1" onclick="deletebox()">刪除</button>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model delete_model">
+        <div class="deletebox rounded shadow-lg bg-white text-center">
+            <div class="rounded-top bg-light text-center p-2">
+                <div class="text-secondary fw-bolder">刪除</div>
+            </div>
+            <div class="p-3">
+                <div>確認刪除此筆內容?</div>
+                <div class="mt-3">
+                    <button type="button" class="btn btn-secondary" onclick="cancel()">取消</button>
+                    <button type="button" class="btn btn-primary mt-2 mt-md-0" onclick="confirm()">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model edit_add_model">
+        <div class="edit_add_box rounded shadow-lg bg-white">
+            <div class="rounded-top bg-light text-center p-2">
+                <div class="text-secondary fw-bolder">編輯/新增</div>
+            </div>
+            <div class="p-3">
+                <div class="mt-2">
+                    <label for="selectName" class="form-label">方案名稱</label>
+                    <input class="form-control" type="text" placeholder="請輸入方案名稱">
+                </div>
+                <div class="mt-2">
+                    <label for="selectState" class="form-label">狀態</label>
+                    <select class="form-select">
+                        <option value="1" selected>啟用</option>
+                        <option value="2">停用</option>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    <label for="selectDetail" class="form-label">方案詳情</label>
+                    <textarea class="form-control" rows="3" placeholder="請輸入方案詳情"></textarea>
+                </div>
+                <div class="mt-2">
+                    <label for="remark" class="form-label">備註</label>
+                    <textarea class="form-control" rows="3" placeholder="請輸入備註"></textarea>
+                </div>
+                <div class="mt-3 text-center">
+                    <button type="button" class="btn btn-secondary" onclick="cancel()">取消</button>
+                    <button type="button" class="btn btn-primary mt-md-0 mt-2" onclick="confirm()">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
