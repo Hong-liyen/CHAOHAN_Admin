@@ -51,6 +51,9 @@ label {
     opacity: .85;
     transition: all 0.2s ease;
 }
+.aside_menu li.active, .aside_menu li:hover {
+    background-color: #171717;
+}
 .aside_menu li .fa-angle-down, .aside_menu li .fa-angle-up {
     position: absolute;
     right: 15px;
