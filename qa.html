@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>後台-訂單管理</title>
+    <title>後台-常見問題管理</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,7 +24,7 @@
             <li>
                 <a href="#" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-file-text-o px-2" aria-hidden="true"></i>商品管理</a>
             </li>
-            <li class="active">
+            <li>
                 <a href="order.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-table px-2" aria-hidden="true"></i>訂單管理</a>
             </li>
             <li>
@@ -45,7 +45,7 @@
                     <a href="#" class="d-flex align-items-center text-white py-2">用戶變化報表</a>
                 </li>
             </div>
-            <li>
+            <li class="active">
                 <a href="qa.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-quora px-2" aria-hidden="true"></i>常見問題管理</a>
             </li>
             <li>
@@ -79,7 +79,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb py-2">
                         <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>首頁</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">訂單管理</li>
+                        <li class="breadcrumb-item active" aria-current="page">常見問題管理</li>
                     </ol>
                 </nav>
                 <div class="search_list py-1">
@@ -97,20 +97,15 @@
                                 </div>
                             </div>
                             <div class="col-md-3 mt-md-0 mt-2">
-                                <label for="memberName" class="form-label">會員名字</label>
-                                <input class="form-control" type="text" placeholder="請輸入會員名字">
-                            </div>
-                            <div class="col-md-3 mt-md-0 mt-2">
-                                <label for="selectState" class="form-label">歸還狀態</label>
+                                <label for="selectState" class="form-label">狀態</label>
                                 <select class="form-select">
-                                    <option value="1" selected>已歸還</option>
-                                    <option value="2">未歸還</option>
-                                    <option value="3">歸還中</option>
+                                    <option value="1" selected>啟用</option>
+                                    <option value="2">停用</option>
                                 </select>
                             </div>
-                            <div class="col-md-3 mt-2">
-                                <label for="orderNumber" class="form-label">訂單編號</label>
-                                <input class="form-control" type="number" placeholder="請輸入訂單編號">
+                            <div class="col-md-3 mt-md-0 mt-2">
+                                <label for="selectName" class="form-label">問題題目</label>
+                                <input class="form-control" type="text" placeholder="請輸入問題題目">
                             </div>
                             <div class="col-md-3 mt-2 d-block align-content-end">
                                 <button type="button" class="btn btn-primary">搜尋</button>
@@ -128,41 +123,31 @@
                         <thead>
                             <tr>
                             <th scope="col">建立日期</th>
-                            <th scope="col">會員名字</th>
-                            <th scope="col">訂單編號</th>
-                            <th scope="col">歸還狀態</th>
+                            <th scope="col">問題題目</th>
+                            <th scope="col">問題答案</th>
+                            <th scope="col">狀態</th>
                             <th scope="col">操作</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                             <th scope="row">2025/05/06</th>
-                            <td>王大明</td>
-                            <td>123456789</td>
-                            <td>歸還中</td>
+                            <td>我忘記密碼了</td>
+                            <td>頁面重新設定您的密碼</td>
+                            <td>啟用</td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-secondary" onclick="editaddbox()">編輯</button>
-                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-2" onclick="deletebox()">刪除</button>
+                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-1" onclick="deletebox()">刪除</button>
                             </td>
                             </tr>
                             <tr>
                             <th scope="row">2025/04/06</th>
-                            <td>王大明</td>
-                            <td>123456789</td>
-                            <td>已歸還</td>
+                            <td>逾期歸還，是如何計算收費？</td>
+                            <td>逾期一天歸還，也會是收取續租費用</td>
+                            <td>停用</td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-secondary" onclick="editaddbox()">編輯</button>
-                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-2" onclick="deletebox()">刪除</button>
-                            </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2025/03/06</th>
-                            <td>王大明</td>
-                            <td>123456789</td>
-                            <td>未歸還</td>
-                            <td>
-                                <button type="button" class="btn btn-sm btn-secondary" onclick="editaddbox()">編輯</button>
-                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-2" onclick="deletebox()">刪除</button>
+                                <button type="button" class="btn btn-sm btn-danger mt-md-0 mt-1" onclick="deletebox()">刪除</button>
                             </td>
                             </tr>
                         </tbody>
@@ -192,20 +177,19 @@
             </div>
             <div class="p-3">
                 <div class="mt-2">
-                    <label for="memberName" class="form-label">會員名字</label>
-                    <input class="form-control" type="text" placeholder="王大明" disabled>
-                </div>
-                <div class="mt-2">
-                    <label for="orderNumber" class="form-label">訂單編號</label>
-                    <input class="form-control" type="text" placeholder="123456789" disabled>
+                    <label for="question" class="form-label">問題題目</label>
+                    <input class="form-control" type="text" placeholder="請輸入問題題目">
                 </div>
                 <div class="mt-2">
                     <label for="selectState" class="form-label">狀態</label>
                     <select class="form-select">
-                        <option value="1" selected>已歸還</option>
-                        <option value="2">未歸還</option>
-                        <option value="3">歸還中</option>
+                        <option value="1" selected>啟用</option>
+                        <option value="2">停用</option>
                     </select>
+                </div>
+                <div class="mt-2">
+                    <label for="answer" class="form-label">問題答案</label>
+                    <textarea class="form-control" rows="3" placeholder="請輸入問題答案"></textarea>
                 </div>
                 <div class="mt-3 text-center">
                     <button type="button" class="btn btn-secondary" onclick="cancel()">取消</button>
