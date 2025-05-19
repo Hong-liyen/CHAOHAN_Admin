@@ -39,7 +39,7 @@ function menu() {
 // 表格彈窗
 const deleteModel = document.querySelector('.delete_model');
 const editAddModel = document.querySelector('.edit_add_model');
-const subscribeModel = document.querySelector('.subscribe_model');
+const recordsModel = document.querySelector('.records_model');
 
 function deletebox() {
     deleteModel.classList.add('open')
@@ -55,10 +55,10 @@ function editaddbox() {
     }
 }
 
-function subscriberecordsbox() {
-    subscribeModel.classList.add('open')
-    if(subscribeModel.classList.contains('open')) {
-        subscribeModel.classList.remove('close')
+function recordsbox() {
+    recordsModel.classList.add('open')
+    if(recordsModel.classList.contains('open')) {
+        recordsModel.classList.remove('close')
     }
 }
 
@@ -71,9 +71,9 @@ function confirm() {
     if(editAddModel.classList.contains('close')) {
         editAddModel.classList.remove('open')
     }
-    subscribeModel.classList.add('close')
-    if(subscribeModel.classList.contains('close')) {
-        subscribeModel.classList.remove('open')
+    recordsModel.classList.add('close')
+    if(recordsModel.classList.contains('close')) {
+        recordsModel.classList.remove('open')
     }
 }
 
@@ -86,9 +86,9 @@ function cancel() {
     if(editAddModel.classList.contains('close')) {
         editAddModel.classList.remove('open')
     }
-    subscribeModel.classList.add('close')
-    if(subscribeModel.classList.contains('close')) {
-        subscribeModel.classList.remove('open')
+    recordsModel.classList.add('close')
+    if(recordsModel.classList.contains('close')) {
+        recordsModel.classList.remove('open')
     }
 }
 
