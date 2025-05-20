@@ -9,7 +9,6 @@ a {
     text-decoration: none;
 }
 a:hover {
-    opacity: .85;
     transition: all 0.2s ease;
 }
 label {
@@ -65,10 +64,31 @@ label {
 .dropdown_menu {
     display: none;
     background-color: #7a7777;
-}
+} 
 .dropdown_menu li a {
     font-size: .8em;
     padding-left: 40px;
+}
+.dropdown_menu.open li.active {
+    display: block;
+}
+.dropdown_menu_bell {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    top: 40px;
+    right: 50px;
+    z-index: 20;
+    background-color: #fff;
+    border: 1px solid #444;
+}
+.dropdown_menu_bell .list {
+    color: #444;
+    font-size: .8em;
+}
+.date {
+    font-size: .8em;
+    color: #7a7777;
 }
 .main_content {
     width: calc(100% - 210px);
@@ -170,6 +190,16 @@ tbody tr th, tbody tr td {
 .chatlist .avatar {
     width: 4em;
 } 
+.login {
+    display: block;
+    align-items: center;
+    background: url(../images/bg.png) no-repeat;
+    background-color: #f4f4f4;
+    background-size: cover;
+}
+.form {
+    background-color: #fff;
+}
 .open {
     display: block;
 }
@@ -204,6 +234,19 @@ tbody tr th, tbody tr td {
     }
     .main_content {
         width: 100%;
+    }
+    .dropdown_menu_bell {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        left: 0;
+        z-index: 20;
+    }
+    .fa-angle-left {
+        margin-right: 8px;
+    }
+    .chatlist {
+        display: none;
     }
     .deletebox, .edit_add_box, .subscribe_records_box {
         width: 100%;
