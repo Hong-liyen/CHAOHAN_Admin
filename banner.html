@@ -57,6 +57,9 @@
             <li>
                 <a href="manager.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-cog px-2" aria-hidden="true"></i>管理者設定</a>
             </li>
+            <li>
+                <a href="login.html" class="d-flex justify-content-start align-items-center text-white p-2"><i class="fa fa-sign-out px-2" aria-hidden="true"></i>登出</a>
+            </li>
         </div>
     </div>
     <div class="main_content">
@@ -66,10 +69,21 @@
             </div>
             <div class="right d-flex justify-content-between align-items-center">            
                 <a href="#" class="mx-2">
-                    <i class="fa fa-bell" aria-hidden="true"><div class="circle rounded-circle"></div></i>
-                </a>
-                <a href="#" class="mx-2">
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>                
+                    <i class="fa fa-bell" aria-hidden="true" onclick="bell()"><div class="circle rounded-circle"></div></i>
+                    <div class="dropdown_menu_bell rounded m-2">
+                        <div class="list d-flex justify-content-between align-items-center border-bottom py-2 px-3">
+                            <span>Alex123傳了私訊</span><span class="date">2025/05/20</span>
+                        </div>
+                        <div class="list d-flex justify-content-between align-items-center border-bottom py-2 px-3">
+                            <span>新會員peter已註冊</span><span class="date">2025/04/20</span>
+                        </div>
+                        <div class="list d-flex justify-content-between align-items-center border-bottom py-2 px-3">
+                            <span>Alex123傳了私訊</span><span class="date">2025/05/20</span>
+                        </div>
+                        <div class="list d-flex justify-content-between align-items-center border-bottom py-2 px-3">
+                            <span>新會員peter已註冊</span><span class="date">2025/04/20</span>
+                        </div>
+                    </div>
                 </a>
                 <a href="#" class="mx-2"><img src="images/avatar.jpg" alt="" class="rounded-circle"></a>
             </div>
@@ -120,7 +134,6 @@
                             <tr>
                             <th scope="col">建立日期</th>
                             <th scope="col">網頁版圖片</th>
-                            <th scope="col">手機版圖片</th>
                             <th scope="col">狀態</th>
                             <th scope="col">操作</th>
                             </tr>
@@ -128,7 +141,6 @@
                         <tbody>
                             <tr>
                             <th scope="row">2025/05/06</th>
-                            <td><img src="images/avatar.jpg" class="rounded" alt=""></td>
                             <td><img src="images/avatar.jpg" class="rounded" alt=""></td>
                             <td>啟用</td>
                             <td>
@@ -139,7 +151,6 @@
                             <tr>
                             <th scope="row">2025/04/06</th>
                             <td><img src="images/avatar.jpg" class="rounded" alt=""></td>
-                            <td><img src="images/avatar.jpg" class="rounded" alt=""></td>
                             <td>停用</td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-secondary" onclick="editaddbox()">編輯</button>
@@ -148,7 +159,6 @@
                             </tr>
                             <tr>
                             <th scope="row">2025/03/06</th>
-                            <td><img src="images/avatar.jpg" class="rounded" alt=""></td>
                             <td><img src="images/avatar.jpg" class="rounded" alt=""></td>
                             <td>啟用</td>
                             <td>
@@ -185,10 +195,6 @@
                 <div class="mt-2">
                     <label for="websiteImage" class="form-label">網頁版圖片</label>
                     <input class="form-control" type="file" id="websiteImage" multiple>
-                </div>
-                <div class="mt-2">
-                    <label for="phoneImage" class="form-label">手機版圖片</label>
-                    <input class="form-control" type="file" id="phoneImage" multiple>
                 </div>
                 <div class="mt-2">
                     <label for="selectState" class="form-label">狀態</label>

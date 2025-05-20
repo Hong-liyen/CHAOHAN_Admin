@@ -2,6 +2,8 @@
 const aside_menu = document.querySelector('.aside_menu')
 const main_content = document.querySelector('.main_content')
 const aside_close = document.querySelector('.aside_close')
+const chatlist = document.querySelector('.chatlist')
+const chatbox = document.querySelector('.chatbox')
 
 function barMenu() {
     aside_menu.classList.toggle('close')
@@ -23,8 +25,16 @@ function aside_menu_close() {
     }
 }
 
+function chat() {
+    if(window.innerWidth < 768) {
+        chatlist.classList.add('open')
+        chatbox.style.display = 'none'
+    }
+}
+
 // 下拉選單
 const dropdown_menu = document.querySelector('.dropdown_menu')
+const dropdown_menu_bell = document.querySelector('.dropdown_menu_bell')
 const fa_angle_down = document.querySelector('.fa-angle-down')
 
 function menu() {
@@ -34,6 +44,10 @@ function menu() {
     } else {
         fa_angle_down.classList.replace('fa-angle-up', 'fa-angle-down')
     }
+}
+
+function bell() {
+    dropdown_menu_bell.classList.toggle('open')
 }
 
 // 表格彈窗
@@ -91,4 +105,3 @@ function cancel() {
         recordsModel.classList.remove('open')
     }
 }
-
