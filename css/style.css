@@ -78,7 +78,7 @@ label {
     min-width: 300px;
     top: 40px;
     right: 50px;
-    z-index: 20;
+    z-index: 200;
     background-color: #fff;
     border: 1px solid #444;
 }
@@ -237,10 +237,8 @@ tbody tr th, tbody tr td {
     }
     .dropdown_menu_bell {
         position: absolute;
-        top: 40px;
         right: 0;
         left: 0;
-        z-index: 20;
     }
     .fa-angle-left {
         margin-right: 8px;
