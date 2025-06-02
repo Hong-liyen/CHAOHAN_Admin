@@ -141,8 +141,11 @@
                         <thead>
                             <tr>
                             <th scope="col">建立日期</th>
+                            <th scope="col">商品圖片</th>
                             <th scope="col">商品名稱</th>
                             <th scope="col">分類名稱</th>
+                            <th scope="col">商品詳情文案</th>
+                            <th scope="col">商品詳情圖片</th>
                             <th scope="col">庫存數量</th>
                             <th scope="col">狀態</th>
                             <th scope="col">操作</th>
@@ -151,8 +154,15 @@
                         <tbody>
                             <tr>
                             <th scope="row">2025/05/06</th>
+                            <td><img src="images/product_01.png" class="rounded" alt="">
+                                <img src="images/product_02.png" class="rounded" alt="">
+                                <img src="images/product_03.png" class="rounded" alt=""></td>
                             <td>撞色拼接毛衣</td>
                             <td>上衣</td>
+                            <td>我是文案我是文案我是文案</td>
+                            <td><img src="images/product_01.png" class="rounded" alt="">
+                                <img src="images/product_02.png" class="rounded" alt="">
+                                <img src="images/product_03.png" class="rounded" alt=""></td>
                             <td>
                                 <div class="col-6">
                                     <input class="form-control text-center" type="text" value="1" placeholder="請輸入分類名稱">
@@ -168,8 +178,15 @@
                             </tr>
                             <tr>
                             <th scope="row">2025/04/06</th>
+                            <td><img src="images/product_01.png" class="rounded" alt="">
+                                <img src="images/product_02.png" class="rounded" alt="">
+                                <img src="images/product_03.png" class="rounded" alt=""></td>
                             <td>短版黑牛仔外套</td>
                             <td>下著</td>
+                            <td>我是文案我是文案我是文案</td>
+                            <td><img src="images/product_01.png" class="rounded" alt="">
+                                <img src="images/product_02.png" class="rounded" alt="">
+                                <img src="images/product_03.png" class="rounded" alt=""></td>
                             <td>
                                 <div class="col-6">
                                     <input class="form-control text-center" type="text" value="100" placeholder="請輸入分類名稱">
@@ -209,8 +226,24 @@
             </div>
             <div class="p-3">
                 <div class="mt-2">
+                    <label for="productImage" class="form-label">商品圖片</label>
+                    <input class="form-control" type="file" id="productImage" multiple>
+                </div>
+                <div class="mt-2">
+                    <label for="productName" class="form-label">商品名稱</label>
+                    <input class="form-control" type="text" placeholder="請輸入商品名稱">
+                </div>
+                <div class="mt-2">
                     <label for="categories" class="form-label">分類名稱</label>
                     <input class="form-control" type="text" placeholder="請輸入分類名稱">
+                </div>
+                <div class="mt-2">
+                    <label for="productDetailWord" class="form-label">商品詳情文案</label>
+                    <textarea class="form-control" rows="3" placeholder="請輸入商品詳情文案"></textarea>
+                </div>
+                <div class="mt-2">
+                    <label for="productDetailImage" class="form-label">商品詳情圖片</label>
+                    <input class="form-control" type="file" id="productDetailImage" multiple>
                 </div>
                 <div class="mt-2">
                     <label for="selectState" class="form-label">狀態</label>
